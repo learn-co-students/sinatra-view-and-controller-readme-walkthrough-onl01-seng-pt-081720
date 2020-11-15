@@ -12,16 +12,16 @@ describe "App" do
       expect(last_response.status).to eq(200)
     end
 
-    it 'displays the reversed string' do
-      params = {
-        :string => 'Super Silly String'
-      }
+     it 'displays the reversed string' do
+       params = {
+         :string => 'Super Silly String'
+       }
 
-      post '/reverse', params
+       post '/reverse', params
 
-      expect(last_response.body).to include(params[:string].reverse)
-    end
-  end
+       expect(last_response.body).to include(params[:string].reverse)
+     end
+   end
 
   describe 'GET /friends' do
     it 'responds with a 200' do
